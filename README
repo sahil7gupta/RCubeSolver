@@ -1,0 +1,23 @@
+This is a 2x2x2 Rubiks Cube Solver in Python.
+It displays the shortest steps needed.
+Instead of representing it through 6 different, the program works on values from 1 to 6.
+
+INPUT:
+
+The input is the current state of your cube.
+It is given in form of a list of list of numbers.
+Each sublist corresponds to a face structure of the cube. The sublists are in the order of front, right, back, left, up, down.
+Within each sublist, each number corresponding to a specific color. The order of the number in a sublist is [topleft, top right, bottom right, bottom left] colors of that face. (Except for the back face for which it is bottom right, bottom left, top left, top right.) 
+
+#Example of input=[[[1,3,2,2],[5,2,1,5],[4,4,4,1],[6,4,6,6],[1,6,5,2],[3,5,3,3]]]
+
+
+HOW TO INTERPRET OUTPUT:
+
+r = right, l = left, u = up, d = down, b = back, f = front
+a = anticlockwise, c = clockwise.
+
+So, ra means rotate the right face of your cube anticlockwise.
+
+
+LIMITATION: As the algorithm is based on BSF, it takes only a few seconds to compute the solution if the cube is solvable withing 7 moves. It would take a lot of time for further moves.
